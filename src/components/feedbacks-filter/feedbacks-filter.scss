@@ -1,0 +1,17 @@
+.filter-box {
+    margin-top: 24px;
+}
+
+.filter-box__btn {
+    display: inline-block;
+    margin: 0 8px 14px 0;
+
+    &:last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    &:nth-child(4) {
+        margin-right: 0;
+    }
+}

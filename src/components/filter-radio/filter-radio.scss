@@ -1,0 +1,16 @@
+.filter-radio {
+    display: inline-block;
+    &:hover + .filter-radio__text {
+        background-color: #CFD7FF;
+    }
+}
+
+.filter-radio__text {
+    cursor: pointer;
+    transition: .3s linear all;
+}
+
+.filter-radio__input:checked + .filter-radio__text {
+    color: #FFFFFFFF;
+    background-color: #4661E6;
+}

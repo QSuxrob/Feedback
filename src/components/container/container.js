@@ -1,8 +1,8 @@
 import './container.css'
 
-function Container({children}) {
+function Container({children, className=""}) {
     return (
-        <div className="container">
+        <div className={`container ${className}`}>
             {children}
         </div>
     )

@@ -2,23 +2,31 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 export const DataContext = createContext();
 
-function DataProvider ({children}) {
-    const [ data, setData ] = useState(null)
-    const [ isFetched, setFetched ] = useState(false);
+function DataProvider({ children }) {
+    const [data, setData] = useState(null)
+    const [isFetched, setFetched] = useState(false);
 
     useEffect(() => {
-        if(!isFetched) {
+        if (!isFetched) {
             setFetched(true)
-            fetch('/data.json') 
+            fetch('/data.json')
                 .then(res => res.json())
-                .then(data => {setData(data)});
+                .then(data => {
+                    setData({
+                        ...data,
+                        productRequests: data.productRequests.map(product => ({
+                            ...product,
+                            isClicked: false,
+                        }))
+                    })
+                });
         }
     }, [isFetched]);
 
-    if(!data) {
+    if (!data) {
         return null
     }
-    
+
     return (
         <DataContext.Provider value={{ data, setData }}>
             {children}

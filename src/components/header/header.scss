@@ -1,0 +1,41 @@
+.header {
+    width: 825px;
+    margin-bottom: 24px;
+    padding: 14px 16px 14px 24px;
+    display: flex;
+    align-items: center;
+    background-color: #373F68;
+    border-radius: 10px;
+}
+
+.header__suggestions {
+    margin: 0;
+    padding: 0;
+    margin-left: 14px;
+    margin-right: 38px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+}
+
+.header__sort {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20.23px;
+    color: #F2F4FE;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    cursor: pointer;
+
+    &-type {
+        font-weight: 700;
+        margin-right: 9px;
+    }
+}
+
+.header__btn {
+    margin-left: auto;
+}
