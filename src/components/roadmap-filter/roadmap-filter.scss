@@ -1,0 +1,93 @@
+.roadmap-filter {
+    margin-top: 24px;
+    padding: 19px 24px 24px;
+    color: #647196;
+    background-color: #FFFFFFFF;
+    border-radius: 10px;
+}
+
+.roadmap-filter__head {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roadmap-filter__title {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    color: #3A4374;
+}
+
+.roadmap-filter__link {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #4661E6;
+}
+
+.roadmap-filter__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.roadmap-filter__list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    &:first-child .roadmap-filter__list-item--cycle {
+        background-color: #F49F85;
+    }
+
+    &:nth-child(2) .roadmap-filter__list-item--cycle {
+        background-color: #AD1FEA;
+    }
+
+    &:nth-child(3) .roadmap-filter__list-item--cycle {
+        background-color: #62BCFA;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+
+        & .roadmap-filter__list-item--cycle {
+            background-color: #7bfa62;
+        }
+    }
+
+}
+
+.roadmap-filter__list-item--cycle {
+    width: 8px;
+    height: 8px;
+    margin-right: 16px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.roadmap-filter__list-item--name {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #647196;
+}
+
+.roadmap-filter__list-item--count {
+    margin-left: auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: right;
+    color: #647196;
+}
