@@ -19,6 +19,7 @@
     align-items: center;
     padding: 12px 24px;
     border-bottom: 1px solid #3a437426;
+    cursor: pointer;
 
     &-text {
         font-weight: 400;
@@ -33,11 +34,15 @@
         &:hover {
             color: #AD1FEA;
         }
-    
-        &:focus + .popup__item-tick {
-            display: inline-block;
-        }     
 
+        &:focus+.popup__item-tick {
+            display: inline-block;
+        }
+
+    }
+
+    .popup__option-label {
+        cursor: pointer;
     }
 
     &:last-child {

@@ -1,0 +1,26 @@
+.feedback__container {
+    width: 760px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.feedback__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.feedback__head-left--icon {
+    margin-right: 15px;
+}
+
+.feedback__head-left--link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #647196;
+}

@@ -10,7 +10,7 @@ import { useData } from '../../contexts/data';
 function ProductCard({ properties }) {
     const { data, setData } = useData()
     const changedIndex = data.productRequests.findIndex(product => properties.id === product.id)
-    const { upvotes, title, description, category, comments } = properties;
+    const { upvotes, id, title, description, category, comments } = properties;
     const commentsCount = comments ? comments.length : 0;
     const [isClicked, setClicked] = useState(false);
 
@@ -39,7 +39,7 @@ function ProductCard({ properties }) {
                 <span className='product-card__btn-num'>{isClicked === true ? upvotes + 1: upvotes}</span>
             </button>
             <div className='product-card__body'>
-                <Link to={`/feedback`} className='product-card__title'>{title}</Link>
+                <Link to={`/feedback/${id}`} className='product-card__title'>{title}</Link>
                 <p className='product-card__text'>{description}</p>
                 <FilterBtn>{category}</FilterBtn>
             </div>
