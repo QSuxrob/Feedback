@@ -1,5 +1,5 @@
 import light from '../../assets/images/light.svg';
-import dropDown from '../../assets/images/drop-down.svg';
+import dropDownLight from '../../assets/images/drop-down-light.svg';
 import dropUp from '../../assets/images/drop-up-light.svg';
 import CommonBtn from '../common-btn/common-btn';
 import './header.scss';
@@ -75,7 +75,7 @@ function Header({ count }) {
                         return option.text
                     } })
                     }</span>
-                <img className='header__sort-icon' src={isOpen === true ? dropUp : dropDown} />
+                <img className='header__sort-icon' src={isOpen === true ? dropUp : dropDownLight} />
             </button>
             <CommonBtn to='/add' className='header__btn'>+ Add Feedback</CommonBtn>
             <PopUp className={isOpen === true ? 'popup--opened' : 'popup--closed'} options={sortOptions} defaultValue={sortBy} name='sort' onChange={handleOptionChange} />

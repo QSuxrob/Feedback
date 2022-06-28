@@ -13,11 +13,15 @@ function ProductCard({ properties }) {
     const { upvotes, id, title, description, category, comments } = properties;
     const commentsCount = comments ? comments.length : 0;
     const [isClicked, setClicked] = useState(false);
-
+    const newUpvote = isClicked === true ? upvotes + 1: upvotes;
+    if(isClicked === true) {
+        console.log(newUpvote);
+    }
 
     function onClick() {
         const newProduct = {
             ...properties,
+            newUpvote,
             isClicked: true
         }
         
